@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dgxl7uuca4lj5" path="res://level.png" id="1_xj77j"]
 [ext_resource type="Shader" path="res://crt.gdshader" id="2_hratw"]
 [ext_resource type="PackedScene" uid="uid://b3sxdbkx626f" path="res://Spider.tscn" id="3_lri7a"]
-[ext_resource type="Texture2D" uid="uid://dqtjcby1gswh6" path="res://1223603802356191233remix-1711812738085.png" id="4_jdcs0"]
+[ext_resource type="Texture2D" uid="uid://dqtjcby1gswh6" path="res://background.png" id="4_jdcs0"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_h3qam"]
 vertices = PackedVector2Array(8, 8, -8, 8, -8, -8, 8, -8)

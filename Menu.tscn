@@ -1,7 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cf4g4jrvttmub"]
+[gd_scene load_steps=8 format=3 uid="uid://cf4g4jrvttmub"]
 
+[ext_resource type="Script" path="res://Menu.gd" id="1_8myyb"]
+[ext_resource type="Texture2D" uid="uid://du7je0nvgpm5p" path="res://menu_background.png" id="1_70208"]
 [ext_resource type="FontFile" uid="uid://cvdmrnpnk04k" path="res://monogram/ttf/monogram-extended.ttf" id="1_j3pma"]
 [ext_resource type="Shader" path="res://crt.gdshader" id="2_tc0s6"]
+[ext_resource type="AudioStream" uid="uid://k70md6sede8c" path="res://musics/main_background.mp3" id="4_xc31g"]
 
 [sub_resource type="Theme" id="Theme_uex0b"]
 default_font = ExtResource("1_j3pma")
@@ -21,44 +24,50 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_8myyb")
 
-[node name="Button" type="Button" parent="."]
+[node name="MenuBackground" type="Sprite2D" parent="."]
+position = Vector2(574, 324)
+scale = Vector2(0.1732, 0.15)
+texture = ExtResource("1_70208")
+
+[node name="quit" type="Button" parent="."]
 layout_mode = 0
-offset_left = 358.0
-offset_top = 424.0
-offset_right = 722.0
-offset_bottom = 489.0
+offset_left = 38.0
+offset_top = 400.0
+offset_right = 402.0
+offset_bottom = 465.0
 theme = SubResource("Theme_uex0b")
 text = "Quit"
 
-[node name="Button2" type="Button" parent="."]
+[node name="settings" type="Button" parent="."]
 layout_mode = 0
-offset_left = 361.0
-offset_top = 343.0
-offset_right = 725.0
-offset_bottom = 408.0
+offset_left = 41.0
+offset_top = 319.0
+offset_right = 405.0
+offset_bottom = 384.0
 theme = SubResource("Theme_uex0b")
 text = "Settings"
 
-[node name="Button3" type="Button" parent="."]
+[node name="continue" type="Button" parent="."]
 layout_mode = 0
-offset_left = 361.0
-offset_top = 262.0
-offset_right = 725.0
-offset_bottom = 327.0
+offset_left = 41.0
+offset_top = 238.0
+offset_right = 405.0
+offset_bottom = 303.0
 theme = SubResource("Theme_uex0b")
 text = "Continue"
 
-[node name="Button5" type="Button" parent="."]
+[node name="new_game" type="Button" parent="."]
 layout_mode = 0
-offset_left = 359.0
-offset_top = 182.0
-offset_right = 723.0
-offset_bottom = 247.0
+offset_left = 39.0
+offset_top = 158.0
+offset_right = 403.0
+offset_bottom = 223.0
 theme = SubResource("Theme_uex0b")
 text = "New game"
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="VHS" type="ColorRect" parent="."]
 visible = false
 material = SubResource("ShaderMaterial_vnxmp")
 layout_mode = 0
@@ -66,3 +75,9 @@ offset_left = 3.0
 offset_right = 1146.0
 offset_bottom = 645.0
 mouse_filter = 2
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_xc31g")
+autoplay = true
+
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
