@@ -21,6 +21,14 @@ const DASH_SPEED = SPEED * 10
 
 func _physics_process(delta):
 	var dir = Input.get_vector("Right", "Left", "Up", "Down")
+	if dir:
+		if dir.x < 0:
+			$AnimatedSprite2D.flip_h = true
+		elif dir.x > 0:
+			$AnimatedSprite2D.flip_h = false
+		$AnimatedSprite2D.play('walk')
+	else:
+		$AnimatedSprite2D.play('idle')
 	var dash_dir = (get_global_mouse_position() - position).normalized()
 	
 	if dashTimer.is_stopped(): 
