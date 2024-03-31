@@ -89,9 +89,9 @@ collision_mask = 3
 script = ExtResource("1_5rk86")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_clral")
-animation = &"get_damage"
-frame_progress = 0.860804
+animation = &"attack"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 17)
@@ -104,6 +104,8 @@ one_shot = true
 
 [node name="ATT" type="Area2D" parent="."]
 position = Vector2(0, 17)
+collision_layer = 4
+collision_mask = 4
 
 [node name="AttackCollider" type="CollisionShape2D" parent="ATT"]
 position = Vector2(0, 10)

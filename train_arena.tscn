@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://dxf3lhqsabcaj"]
 
-[ext_resource type="Texture2D" uid="uid://d24masemoywjo" path="res://train_arena.png" id="1_240oc"]
+[ext_resource type="Texture2D" uid="uid://bru8gesloso45" path="res://train_arena.png" id="1_240oc"]
 [ext_resource type="PackedScene" uid="uid://dj6nk1m60n8bx" path="res://Player.tscn" id="2_tw016"]
 [ext_resource type="PackedScene" uid="uid://dfjn747vcwo27" path="res://mannequin.tscn" id="2_vtuwp"]
 [ext_resource type="Shader" path="res://crt.gdshader" id="4_ad7ko"]

@@ -28,7 +28,7 @@ func _physics_process(delta):
 			$AnimatedSprite2D.flip_h = false
 		$AnimatedSprite2D.play('walk')
 	else:
-		$AnimatedSprite2D.play('idle')
+		if attTimer.is_stopped(): $AnimatedSprite2D.play('idle')
 	var dash_dir = (get_global_mouse_position() - position).normalized()
 	
 	if dashTimer.is_stopped(): 
@@ -37,19 +37,20 @@ func _physics_process(delta):
 		velocity = dash_dir * DASH_SPEED * delta
 	
 	if Input.is_action_just_pressed("Atack"):
-		attCol.visible = true
+		$ATT.visible = true
 		attCol.position = dash_dir * ATTACK_LENGHT
 		attCol.shape.radius = ATTACK_RADIUS
+		$AnimatedSprite2D.play("attack")
 		attTimer.start()
 	
 	if Input.is_action_just_pressed("Special"):
-		attCol.visible = true
+		$ATT.visible = true
 		attCol.position = dash_dir * ATTACK_LENGHT2
 		attCol.shape.radius = ATTACK_RADIUS2
 		spTimer.start()
 	
 	if Input.is_action_just_pressed("Dash"): dashTimer.start()
 	
-	if attTimer.is_stopped() and spTimer.is_stopped():attCol.visible = false
+	if attTimer.is_stopped() and spTimer.is_stopped(): $ATT.visible = false
 	
 	move_and_slide()

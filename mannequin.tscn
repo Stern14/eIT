@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dfjn747vcwo27"]
+[gd_scene load_steps=7 format=3 uid="uid://dfjn747vcwo27"]
 
-[ext_resource type="Texture2D" uid="uid://cinuxd22rawou" path="res://mannequin.png" id="1_nfwfk"]
+[ext_resource type="Script" path="res://mannequin.gd" id="1_3vyi5"]
+[ext_resource type="Texture2D" uid="uid://dkuv2333bd44q" path="res://mannequin.png" id="1_nfwfk"]
 [ext_resource type="Texture2D" uid="uid://dpcquyj50awcc" path="res://mannequin_white.png" id="2_56qyf"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kyql6"]
@@ -36,9 +37,14 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sxmy0"]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g001r"]
+radius = 14.0
+height = 64.0
+
 [node name="CharacterBody2D" type="CharacterBody2D"]
 collision_layer = 2
-collision_mask = 3
+collision_mask = 7
+script = ExtResource("1_3vyi5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
@@ -50,3 +56,12 @@ frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_sxmy0")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CapsuleShape2D_g001r")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
