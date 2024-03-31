@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dj6nk1m60n8bx"]
+[gd_scene load_steps=14 format=3 uid="uid://dj6nk1m60n8bx"]
 
 [ext_resource type="Texture2D" uid="uid://bvmpfv1welog5" path="res://ggg.png" id="1_5p7k1"]
 [ext_resource type="Script" path="res://Player.gd" id="1_5rk86"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cfiyqg3wu286o" path="res://KATANAANIMATE2.png" id="4_ijluy"]
 [ext_resource type="Texture2D" uid="uid://ctc3pqq8b1ipd" path="res://goanimate4.png" id="5_3ib8e"]
 [ext_resource type="Texture2D" uid="uid://cluxnbbswepms" path="res://KATANAANIMATE3.png" id="5_cpu36"]
+[ext_resource type="Texture2D" uid="uid://cpsyktef8g5px" path="res://KATANASTAY_white.png" id="6_6j282"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_clral"]
 animations = [{
@@ -28,6 +29,26 @@ animations = [{
 "loop": true,
 "name": &"attack",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_6j282")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_3xs58")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_6j282")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_3xs58")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_6j282")
+}],
+"loop": true,
+"name": &"get_damage",
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -69,8 +90,8 @@ script = ExtResource("1_5rk86")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_clral")
-animation = &"idle"
-frame_progress = 0.872191
+animation = &"get_damage"
+frame_progress = 0.860804
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 17)
