@@ -23,8 +23,10 @@ func _physics_process(delta):
 	var dir = Input.get_vector("Right", "Left", "Up", "Down")
 	var dash_dir = (get_global_mouse_position() - position).normalized()
 	
-	if dashTimer.is_stopped(): velocity = dir * SPEED * delta
-	else: velocity = dash_dir * DASH_SPEED * delta
+	if dashTimer.is_stopped(): 
+		velocity = dir * SPEED * delta
+	else: 
+		velocity = dash_dir * DASH_SPEED * delta
 	
 	if Input.is_action_just_pressed("Atack"):
 		attCol.visible = true

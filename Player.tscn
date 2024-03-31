@@ -1,7 +1,59 @@
-[gd_scene load_steps=5 format=3 uid="uid://dj6nk1m60n8bx"]
+[gd_scene load_steps=13 format=3 uid="uid://dj6nk1m60n8bx"]
 
 [ext_resource type="Texture2D" uid="uid://bvmpfv1welog5" path="res://ggg.png" id="1_5p7k1"]
 [ext_resource type="Script" path="res://Player.gd" id="1_5rk86"]
+[ext_resource type="Texture2D" uid="uid://brrcniyp24bdj" path="res://KATANASTAY.png" id="2_3xs58"]
+[ext_resource type="Texture2D" uid="uid://c6h7cnvrnpy3k" path="res://goanimate2.png" id="3_e6dki"]
+[ext_resource type="Texture2D" uid="uid://s6833gfo2o35" path="res://KATANAANIMATE1.png" id="3_v0sk4"]
+[ext_resource type="Texture2D" uid="uid://dqy8hw8rhyyw5" path="res://goanimate3.png" id="4_7dafl"]
+[ext_resource type="Texture2D" uid="uid://cfiyqg3wu286o" path="res://KATANAANIMATE2.png" id="4_ijluy"]
+[ext_resource type="Texture2D" uid="uid://ctc3pqq8b1ipd" path="res://goanimate4.png" id="5_3ib8e"]
+[ext_resource type="Texture2D" uid="uid://cluxnbbswepms" path="res://KATANAANIMATE3.png" id="5_cpu36"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_clral"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_3xs58")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_v0sk4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ijluy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_cpu36")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_5p7k1")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_5p7k1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_e6dki")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_7dafl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_3ib8e")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 4.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fhq33"]
 size = Vector2(14, 14)
@@ -15,9 +67,10 @@ collision_layer = 2
 collision_mask = 3
 script = ExtResource("1_5rk86")
 
-[node name="Ggg" type="Sprite2D" parent="."]
-texture_filter = 1
-texture = ExtResource("1_5p7k1")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_clral")
+animation = &"attack"
+frame_progress = 0.468233
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 17)

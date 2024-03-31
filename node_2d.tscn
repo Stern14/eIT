@@ -489,6 +489,7 @@ layer_1/tile_data = PackedInt32Array()
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+visible = false
 material = SubResource("ShaderMaterial_ng7hj")
 offset_right = 911.0
 offset_bottom = 918.0
@@ -499,7 +500,6 @@ y_sort_enabled = true
 
 [node name="Player" parent="ysort" instance=ExtResource("1_ogxpb")]
 z_as_relative = false
-y_sort_enabled = false
 position = Vector2(-225, 73)
 scale = Vector2(2.25, 2.25)
 

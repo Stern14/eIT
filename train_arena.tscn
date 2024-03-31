@@ -1,8 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://mu768l18w8id"]
+[gd_scene load_steps=10 format=3 uid="uid://dxf3lhqsabcaj"]
 
-[ext_resource type="Texture2D" uid="uid://bru8gesloso45" path="res://train_arena.png" id="1_240oc"]
+[ext_resource type="Texture2D" uid="uid://d24masemoywjo" path="res://train_arena.png" id="1_240oc"]
 [ext_resource type="PackedScene" uid="uid://dj6nk1m60n8bx" path="res://Player.tscn" id="2_tw016"]
-[ext_resource type="PackedScene" uid="uid://b3tahya3bkwvl" path="res://mannequin.tscn" id="2_vtuwp"]
+[ext_resource type="PackedScene" uid="uid://dfjn747vcwo27" path="res://mannequin.tscn" id="2_vtuwp"]
 [ext_resource type="Shader" path="res://crt.gdshader" id="4_ad7ko"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_w5tka"]
@@ -504,6 +504,7 @@ position = Vector2(52, 169)
 scale = Vector2(2.25, 2.25)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
 material = SubResource("ShaderMaterial_q2au7")
