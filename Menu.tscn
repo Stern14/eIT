@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://cf4g4jrvttmub"]
 
 [ext_resource type="Script" path="res://Menu.gd" id="1_8myyb"]
-[ext_resource type="Texture2D" uid="uid://du7je0nvgpm5p" path="res://menu_background.png" id="1_70208"]
 [ext_resource type="FontFile" uid="uid://cvdmrnpnk04k" path="res://monogram/ttf/monogram-extended.ttf" id="1_j3pma"]
+[ext_resource type="Texture2D" uid="uid://b3w7te6nqarn6" path="res://menu_background2.png" id="2_dxmxx"]
 [ext_resource type="Shader" path="res://crt.gdshader" id="2_tc0s6"]
 [ext_resource type="AudioStream" uid="uid://k70md6sede8c" path="res://musics/main_background.mp3" id="4_xc31g"]
 
@@ -29,7 +29,7 @@ script = ExtResource("1_8myyb")
 [node name="MenuBackground" type="Sprite2D" parent="."]
 position = Vector2(574, 324)
 scale = Vector2(0.1732, 0.15)
-texture = ExtResource("1_70208")
+texture = ExtResource("2_dxmxx")
 
 [node name="quit" type="Button" parent="."]
 layout_mode = 0
