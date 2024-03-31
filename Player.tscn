@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=3 uid="uid://dj6nk1m60n8bx"]
+
+[ext_resource type="Texture2D" uid="uid://bvmpfv1welog5" path="res://ggg.png" id="1_5p7k1"]
+[ext_resource type="Script" path="res://Player.gd" id="1_5rk86"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vwl2y"]
+radius = 8.0
+height = 46.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_n3i5x"]
+radius = 12.0
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 3
+script = ExtResource("1_5rk86")
+
+[node name="Ggg" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_5p7k1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_vwl2y")
+debug_color = Color(1, 1, 1, 0.419608)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
+[node name="ATT" type="Area2D" parent="."]
+position = Vector2(0, 17)
+
+[node name="AttackCollider" type="CollisionShape2D" parent="ATT"]
+position = Vector2(0, 10)
+shape = SubResource("CircleShape2D_n3i5x")
+debug_color = Color(0.654902, 0.745098, 1, 0.419608)
+
+[node name="AttcTimer" type="Timer" parent="ATT"]
+one_shot = true
+
+[node name="Timer" type="Timer" parent="ATT"]
+wait_time = 0.1
+one_shot = true

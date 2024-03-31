@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://di76ptflc5cfs"]
+
+[ext_resource type="PackedScene" uid="uid://boye74loykqaf" path="res://Player.tscn" id="1_ogxpb"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_ogxpb")]
+position = Vector2(87, 110)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(256, 192)
+zoom = Vector2(2, 2)
