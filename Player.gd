@@ -12,7 +12,7 @@ const DAMAGE = 5 # DMG per frame
 
 const DAMAGE2 = 15
 
-const DASH_SPEED = 48 * 200
+const DASH_SPEED = SPEED * 10
 
 @onready var attCol = $ATT/AttackCollider
 @onready var attTimer = $ATT/AttcTimer

@@ -14,6 +14,16 @@ config/name="eIT"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[display]
+
+window/size/viewport_width=1024
+window/size/viewport_height=768
+window/stretch/mode="viewport"
+
+[dotnet]
+
+project/assembly_name="eIT"
+
 [editor]
 
 version_control/plugin_name="GitPlugin"
@@ -59,5 +69,5 @@ Dash={
 
 [rendering]
 
-renderer/rendering_method="gl_compatibility"
+renderer/rendering_method="mobile"
 renderer/rendering_method.mobile="gl_compatibility"

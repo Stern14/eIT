@@ -1,6 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://dfjn747vcwo27"]
+[gd_scene load_steps=4 format=3 uid="uid://b3tahya3bkwvl"]
 
-[ext_resource type="Texture2D" uid="uid://cinuxd22rawou" path="res://mannequin.png" id="1_nfwfk"]
+[ext_resource type="Texture2D" uid="uid://dkuv2333bd44q" path="res://mannequin.png" id="1_nfwfk"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kyql6"]
 animations = [{
@@ -20,6 +20,7 @@ collision_layer = 2
 collision_mask = 3
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_kyql6")
 
